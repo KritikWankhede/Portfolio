@@ -1,0 +1,729 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  padding: 0 10%;
+}
+
+#hero {
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  animation: topIn 1.4s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s; 
+}
+
+.header-logo {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(43, 58, 85, 0.9);
+}
+
+.header-logo span {
+  font-size: 72px;
+  color: rgb(133, 40, 255);
+  line-height: 0.2;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  padding: 20px 0;
+}
+
+.nav-item {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: grey;
+  transition: 0.3s;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.nav-item:hover {
+  color: rgb(133, 40, 255);
+}
+
+.header-btn {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: rgb(133, 40, 255);
+  color: white;
+  height: 45px;
+  width: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header-btn:hover {
+  background-color: rgb(96, 28, 184);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  height: 90vh;
+}
+
+.content h3 {
+  font-size: 3rem;
+  color: rgba(43, 58, 85, 0.9);
+  animation: bottomIn 1.4s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+.content h1 {
+  font-size: 5.5rem;
+  color: rgba(43, 58, 85, 0.9);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin: -40px 0;
+  animation: bottomIn 1.4s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
+}
+
+h1 span {
+  color: rgb(133, 40, 255);
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: grey;
+  margin-top: 20px;
+  animation: bottomIn 1.4s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+.cta-section {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.cta-section button {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  height: 50px;
+  width: 300px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(43, 58, 85, 0.2);
+  
+  animation: bottomIn 1.4s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+.cta-1 {
+  background-color: rgba(43, 58, 85, 0.9);
+  color: white;
+}
+
+.cta-2 {
+  background-color: transparent;
+  color: rgb(133, 40, 255);
+  border: 2px solid rgb(133, 40, 255);
+}
+
+.cta-section button:hover {
+  background-color: rgb(133, 40, 255);
+  color: white;
+}
+
+.right {
+  position: relative;
+}
+
+.hero-img {
+  width: 110%;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  animation: imgIn 1.4s ease-in-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.social-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.social-section i {
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid rgba(43, 58, 85, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  padding: 8px;
+  border-radius: 25px;
+  color: rgba(43, 58, 85, 0.9);
+  cursor: pointer;
+  transition: 0.3s;
+  
+  animation: bottomIn 1.4s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+.social-section i:hover {
+  color: rgb(133, 40, 255);
+  border-color: rgb(133, 40, 255);
+  transform: scale(1.1);
+}
+
+.img-wrap {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Animations */
+@keyframes bottomIn {
+  from {
+    transform: translateY(250px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes topIn {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes imgIn {
+  from {
+    transform: translateY(250px) scale(0.8);
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 428px) {
+  body {
+    padding: 0 3%;
+  }
+
+  #hero {
+    overflow: visible;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+  }
+
+  .content h3 {
+    font-size: 1.5rem;
+  }
+
+  .content h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin: -10px 0;
+  }
+
+  h1 span {
+    color: rgb(133, 40, 255);
+  }
+
+  .cta-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .social-section {
+    justify-content: center;
+  }
+
+  .hero-img {
+    display: none;
+  }
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 80px 0;
+    animation: bottomIn 1.4s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 0.7s;
+  }
+  
+  #contact h2 {
+    font-size: 3rem;
+    color: rgba(43, 58, 85, 0.9);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: rgba(133, 40, 255, 0.8);
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  input[type="submit"] {
+    background-color: rgba(133, 40, 255, 0.9);
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: rgba(96, 28, 184, 0.9);
+  }
+  
+  /* Animations */
+  @keyframes bottomIn {
+    from {
+      transform: translateY(250px);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  
+/* About Me Section */
+.About {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    animation: bottomIn 1.4s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+
+#about h2 {
+    font-size: 3rem;
+    color: rgba(43, 58, 85, 0.9);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: grey;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+#about h3 {
+    font-size: 2rem;
+    color: rgba(43, 58, 85, 0.9);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#about ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#about ul li {
+    font-size: 1.1rem;
+    color: rgba(43, 58, 85, 0.9);
+    margin-bottom: 10px;
+}
+
+.About ul li:before {
+    content: '•';
+    margin-right: 10px;
+    color: rgb(133, 40, 255);
+}
+
+/* Responsive Design for About Section */
+@media screen and (max-width: 768px) {
+    #about p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    #about h2, #about h3 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    #about p {
+        font-size: 0.9rem;
+    }
+
+    #about h2, #about h3 {
+        font-size: 1.5rem;
+    }
+
+    .About {
+        padding: 30px 0;
+    }
+}
+
+/* Skills Section */
+.Skills {
+    padding: 60px 0;
+    background-color: #fff;
+    animation: bottomIn 1.4s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+
+#skills h2 {
+    font-size: 3rem;
+    color: rgba(43, 58, 85, 0.9);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#skills h3 {
+    font-size: 2rem;
+    color: rgba(43, 58, 85, 0.9);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#skills ul li {
+    font-size: 1.1rem;
+    color: rgba(43, 58, 85, 0.9);
+    margin-bottom: 10px;
+}
+
+.Skills ul li:before {
+    content: '•';
+    margin-right: 10px;
+    color: rgb(133, 40, 255);
+}
+
+/* Responsive Design for Skills Section */
+@media screen and (max-width: 768px) {
+    #skills p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    #skills h2, #skills h3 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    #skills p {
+        font-size: 0.9rem;
+    }
+
+    #skills h2, #skills h3 {
+        font-size: 1.5rem;
+    }
+
+    .Skills {
+        padding: 30px 0;
+    }
+}
+
+/* Case Studies Section */
+.CaseStudies {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Light background to differentiate */
+    animation: bottomIn 1.4s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+}
+
+#case-studies h2 {
+    font-size: 3rem;
+    color: rgba(43, 58, 85, 0.9);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.case-study {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(43, 58, 85, 0.1);
+    border-radius: 8px;
+    animation: fadeInUp 1.4s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+
+.case-study h3 {
+    font-size: 2rem;
+    color: rgba(43, 58, 85, 0.9);
+    margin-bottom: 10px;
+}
+
+.case-study p {
+    font-size: 1.1rem;
+    color: rgba(43, 58, 85, 0.7);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.case-study p strong {
+    color: rgba(43, 58, 85, 0.9);
+}
+
+/* Responsive Design for Case Studies Section */
+@media screen and (max-width: 768px) {
+    #case-studies h2 {
+        font-size: 2.5rem;
+    }
+
+    .case-study {
+        padding: 15px;
+    }
+
+    .case-study h3 {
+        font-size: 1.75rem;
+    }
+
+    .case-study p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    #case-studies h2 {
+        font-size: 2rem;
+    }
+
+    .case-study {
+        padding: 10px;
+    }
+
+    .case-study h3 {
+        font-size: 1.5rem;
+    }
+
+    .case-study p {
+        font-size: 0.9rem;
+    }
+
+    .CaseStudies {
+        padding: 30px 0;
+    }
+}
+
+/* Animation for Case Studies Fade-In */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Projects Section Styling */
+.Projects {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    animation: fadeIn 1.4s ease-in-out forwards;
+    opacity: 0;
+}
+
+.Projects h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgba(43, 58, 85, 0.9);
+    margin-bottom: 40px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.project img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover img {
+    transform: scale(1.05);
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    color: rgba(43, 58, 85, 0.9);
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    color: grey;
+}
+
+.project a {
+    font-size: 1rem;
+    color: rgb(133, 40, 255);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project a:hover {
+    color: rgb(96, 28, 184);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .Projects {
+        padding: 40px 0;
+    }
+
+    .project {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .Projects h2 {
+        font-size: 2rem;
+    }
+
+    .project img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+.animate-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+  

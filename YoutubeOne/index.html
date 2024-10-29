@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kritik Wankhede | Salesforce Developer</title>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section id="hero">
+    <header>
+      <a class="header-logo">Kritik<span>.</span></a>
+      <nav>
+        <a class="nav-item" href="#home">Home</a>
+        <a class="nav-item" href="#about">About</a>
+        <a class="nav-item" href="#skills">Skills</a>
+        <a class="nav-item" href="#case-studies">Case Studies</a>
+        <a class="nav-item" href="#contact">Contact</a>
+      </nav>
+      <button class="header-btn">Let's Talk</button>
+    </header>
+
+    <div class="content">
+      <div class="left">
+        <h3>Hi, I'm Kritik Wankhede!</h3>
+        <h1>Salesforce <span>Developer</span></h1>
+        <p>
+          A dedicated Salesforce Developer with over a year of experience in creating efficient business solutions using Lightning Web Components, Apex, and JavaScript. I specialize in building user-friendly applications that solve real-world problems.
+        </p>
+        <div class="cta-section">
+          <button class="cta-1" id="view-projects">View Projects
+            <i class="fa-solid fa-code"></i>
+          </button>
+          <button class="cta-2">Hire me
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </button>
+        </div>
+        <div class="social-section">
+          <a href="https://github.com/KritikWankhede" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="www.linkedin.com/in/kritik-wankhede" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.naukri.com/mynaukri/mn_newprofile/view" target="_blank"><i class="fas fa-briefcase"></i></a>
+        </div>
+      </div>
+
+      <!-- <div class="right">
+        <div class="img-wrap">
+          <img class="hero-img" src="Kritik Wankhede Image.jpg" alt="Kritik Wankhede">
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <div class="About">
+    <section id="about" class="animate-on-scroll">
+        <h2>About Me</h2>
+        <p>I have over a year of experience in Salesforce development, specializing in Lightning Web Components (LWC), Apex, and JavaScript. I enjoy solving complex problems and creating user-friendly applications.</p>
+        
+        <h3>Certifications</h3>
+        <ul>
+            <li>Salesforce Administrator</li>
+            <li>Platform Developer I (PD-1)</li>
+        </ul>
+
+        <h3>Soft Skills</h3>
+        <ul>
+            <li>Design Thinking</li>
+            <li>Active Listening</li>
+        </ul>
+    </section>
+    </div>
+
+  <div class="Skills">
+    <section id="skills" class="animate-on-scroll">
+        <h2>Technical Skills</h2>
+
+        <h3>Programming Languages</h3>
+        <ul>
+            <li>Apex</li>
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+            <li>SQL</li>
+        </ul>
+
+        <h3>Salesforce Technologies</h3>
+        <ul>
+            <li>Lightning Web Components (LWC)</li>
+            <li>Apex Triggers</li>
+            <li>Salesforce APIs</li>
+        </ul>
+    </section>
+    </div>
+
+    <div class="Projects">
+        <section id="projects" class="animate-on-scroll">
+            <h2>Projects</h2>
+            <div class="project">
+                <img src="Project1.png" alt="Project 1">
+                <h3>Project One</h3>
+                <p>Blood Bank Management System</p>
+                <p><a href="https://github.com/KritikWankhede/LWC-Practice/tree/main/Blood%20Bank" target="_blank">View Code</a></p>
+            </div>
+            <div class="project">
+                <img src="project2-image-url.jpg" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>An Apex trigger for automating lead assignment.</p>
+                <p><a href="https://github.com/your-repo/project2" target="_blank">View Code</a></p>
+            </div>
+        </section>
+    </div>
+
+    <div class="CaseStudies">
+        <section id="case-studies" class="animate-on-scroll">
+            <h2>Case Studies</h2>
+            <div class="case-study">
+                <h3>Case Study: Project One</h3>
+                <p><strong>Problem:</strong> Clients faced difficulties in collecting the right information about blood quantity and donor.</p>
+                <p><strong>Solution:</strong> Developed a user-friendly app using LWC and completely automated it.</p>
+                <p><strong>Impact:</strong> Increased the number of donors and ensured an accurate quantity of blood present in the Blood Bank.</p>
+            </div>
+            <!-- Additional case studies can be added similarly -->
+        </section>
+    </div>
+    
+  <section id="contact" class="animate-on-scroll">
+    <h2>Contact Me</h2>
+    <div class="contact-form-container">
+      <form id="contactForm" action="/send" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="submit" value="Send Message">
+      </form>
+    </div>
+    <div id="formResponse" style="display:none;"></div>
+  </section>
+  
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
